@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Implement the Nelder-mead algorithm on the function $f(x,y) = (x-1)^2 + (y-x^2)^2$ starting at initial point $(-1,-1)$.
+Implement the Nelder-mead algorithm on the function f(x,y) = (x-1)^2 + (y-x^2)^2 starting at initial point (-1,-1).
 """
 
 from numpy import arange, meshgrid
@@ -64,7 +64,7 @@ for iter in range(maxiter):
     continue
 
   # contraction
-  if rscore > res[-1][1]: ##made correction - it was 'if rscore < res[-1][1]' but should be 'if rscore > res[-1][1]'
+  if rscore > res[-1][1]:
     xc = (res[-1][0] + x0)/2
     cscore = f(xc)
     if cscore < rscore: ##should be ideally compared with res[-1][1] i.e. the worst point(xw)
